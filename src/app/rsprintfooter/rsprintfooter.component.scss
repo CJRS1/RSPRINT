@@ -1,0 +1,111 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background: blue;
+    padding: 40px 0 0 0;
+}
+
+.footer_derechos_container{
+    width: 100%;
+
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 80px 0 80px;
+}
+
+.footer_nosotros_container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_nosotros_container img{
+    margin-bottom: 20px;
+}
+
+.footer_nosotros_container p{
+    text-align: justify;
+}
+
+.footer_ubicacion_container{
+    width: 300px;
+}
+
+.footer_horario_contacto_container{
+    width: 300px;
+}
+
+.footer_redes_pago_container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_redes_pago_container img{
+    width: 60px;
+}
+
+.redes_sociales_container{
+    background: yellow;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redes_sociales_container img{
+        width: 50px;
+}
+
+.tiktok{
+    height: 50px;
+}
+
+.pago_container{
+    background: yellow;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.footer_derechos_container{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background: black;
+    color: white;
+    vertical-align: bottom;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0 8px 0;
+}
+
+.footer_derechos_container p{
+    font-size: 17px;
+}
+
+.whatsapp{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 20px 20px 0;
+}
+
+.whatsapp img{
+    height: 100px;
+}

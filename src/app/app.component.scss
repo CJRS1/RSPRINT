@@ -1,0 +1,27 @@
+.img_logo_whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    transition: all 0.3s ease;
+}
+
+.img_logo_whatsapp:hover {
+    animation: scale 1s infinite;
+    box-shadow: 0 0 0 3px #ffe55a;
+    border-radius: 50%;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
