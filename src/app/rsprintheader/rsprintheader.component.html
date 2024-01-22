@@ -8,15 +8,16 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex justify-content-center  align-items-center link_container">
-                    <a class="nav-link active img_logo_rsprint_container" aria-current="page" href="#">
+                    <a class="nav-link active img_logo_rsprint_container" aria-current="page" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
                         <img class="img_logo_rsprint_header" src="../../assets/RS.png" alt="Logo RSPrint">
                     </a>
-                    <a class="nav-link menu_item" href="#">Servicios</a>
-                    <a class="nav-link menu_item" href="#">Nosotros</a>
+                    <a class="nav-link menu_item" routerLink="/servicios" routerLinkActive="active" ariaCurrentWhenActive="page">Servicios</a>
+                    <a class="nav-link menu_item" routerLink="/nosotros" routerLinkActive="active" ariaCurrentWhenActive="page">Nosotros</a>
                     <!-- <a class="nav-link menu_item" href="#">Ubícanos</a> -->
-                    <a class="nav-link menu_item" href="#">Contáctanos</a>
+                    <a class="nav-link menu_item" routerLink="/contactanos" routerLinkActive="active" ariaCurrentWhenActive="page">Contáctanos</a>
                 </div>
             </div>
         </div>
     </nav>
+    <!-- <router-outlet></router-outlet> -->
 </header>

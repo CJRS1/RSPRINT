@@ -1,8 +1,15 @@
+@charset "UTF-8";
 footer {
   display: flex;
   flex-direction: column;
   background: blue;
   padding: 40px 0 0 0;
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
+  /* 100% del ancho original, el alto se ajustará automáticamente */
+  background-position: center;
 }
 
 .footer_derechos_container {
@@ -13,35 +20,42 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
   margin: 0 80px 0 80px;
 }
 
-.footer_nosotros_container {
+.footer_us_container {
   width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.footer_nosotros_container img {
+.footer_us_container img {
+  width: 200px !important;
   margin-bottom: 20px;
 }
-
-.footer_nosotros_container p {
+.footer_us_container p {
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
   text-align: justify;
 }
 
-.footer_ubicacion_container {
+.footer_localization_container {
   width: 300px;
 }
 
 .footer_horario_contacto_container {
   width: 300px;
 }
+.footer_horario_contacto_container .iframe {
+  width: 100%;
+  height: 412px;
+}
 
 .footer_redes_pago_container {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,30 +66,46 @@ footer {
 }
 
 .redes_sociales_container {
-  background: yellow;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
-.redes_sociales_container img {
-  width: 50px;
+.redes_sociales_container a img {
+  transition: all 0.3s ease;
+}
+.redes_sociales_container a img:hover {
+  animation: scale 1s infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .tiktok {
-  height: 50px;
+  height: 60px;
 }
 
 .pago_container {
-  background: yellow;
   width: 100%;
   height: 100px;
-  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.pago_container img {
+  width: 80px;
+}
+.pago_container .pago_app {
+  width: 100px;
 }
 
 .footer_derechos_container {

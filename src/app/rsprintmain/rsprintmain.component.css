@@ -9,9 +9,9 @@ main {
   align-items: center;
 }
 .services_container h4 {
+  margin-top: 15px;
   font-size: 50px;
   font-weight: 900;
-  margin: 0;
   line-height: 60px;
   text-align: center;
 }
@@ -24,8 +24,7 @@ main {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 40px 0 40px 0;
-  background: yellow;
+  padding: 20px 0 20px 0;
 }
 
 .service_card {
@@ -33,16 +32,45 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .service_card h2 {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 50px;
-  font-weight: 700;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 10px #000;
+}
+.service_card img {
+  transition: all 0.3s ease;
+}
+.service_card img:hover {
+  animation: scale 1s infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.servicio_card img {
-  width: 400px !important;
-  height: 400px !important;
+.service_card:hover {
+  cursor: pointer;
+}
+
+.service_img {
+  width: 70% !important;
+  filter: brightness(0.5);
   margin-bottom: 10px;
 }
 
@@ -126,6 +154,7 @@ main {
 
 .work_card img {
   width: 300px;
-  height: 300px;
   margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }/*# sourceMappingURL=rsprintmain.component.css.map */
