@@ -6,11 +6,13 @@ import { RsprintcarouselComponent } from './rsprintcarousel/rsprintcarousel.comp
 import { RsprintfooterComponent } from './rsprintfooter/rsprintfooter.component';
 import { RsprintmainComponent } from './rsprintmain/rsprintmain.component';
 import { RsprintserviceComponent } from './rsprintservice/rsprintservice.component';
+import { RsprintcontactComponent } from './rsprintcontact/rsprintcontact.component';
+import { RsprintusComponent } from './rsprintus/rsprintus.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, RsprintheaderComponent, RsprintcarouselComponent, RsprintfooterComponent, RsprintmainComponent, RsprintserviceComponent],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, RsprintheaderComponent, RsprintcarouselComponent, RsprintfooterComponent, RsprintmainComponent, RsprintserviceComponent, RsprintcontactComponent, RsprintusComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

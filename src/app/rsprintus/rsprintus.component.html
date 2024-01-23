@@ -1,36 +1,33 @@
 <main id="nosotros">
-    <div class="servicio_logo_titulo">
+    <!-- <div class="servicio_logo_titulo">
         <img src="" alt="Nuestros Servicios">
-    </div>
+    </div> -->
     <div class="botones_descripcion_container">
         <div class="botones_container">
-            <button>
-                Nosotros
-            </button>
-            <button>
-                Visión
-            </button>
-            <button>
-                Misión
-            </button>
+            <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style" >
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="nosotros" #group="matButtonToggleGroup" >
+                    <mat-button-toggle value="nosotros" class="boton_option">Nosotros</mat-button-toggle>
+                    <mat-button-toggle value="vision" class="boton_option">Visión</mat-button-toggle>
+                    <mat-button-toggle value="mision" class="boton_option">Misión</mat-button-toggle>
+                </mat-button-toggle-group>
+            </mat-button-toggle-group>
         </div>
-        <div class="nosotros_descripcion_card">
+        <div class="nosotros_descripcion_card" *ngIf="group.value === 'nosotros'">
+            <h1 class="title">RS Print and cut</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis praesentium molestias! Tenetur dolorem praesentium porro similique quibusdam nisi nihil labore id, dolore iusto totam reiciendis hic consequatur dolor inventore.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis praesentium molestias! Tenetur dolorem praesentium porro similique quibusdam nisi nihil labore id, dolore iusto totam reiciendis hic consequatur dolor inventore.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis praesentium molestias! Tenetur dolorem praesentium porro similique quibusdam nisi nihil labore id, dolore iusto totam reiciendis hic consequatur dolor inventore.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis praesentium molestias! Tenetur dolorem praesentium porro similique quibusdam nisi nihil labore id, dolore iusto totam reiciendis hic consequatur dolor inventore.
+                es una empresa joven dedicada a ofrecer servicios de impresión y corte de alta calidad. Contamos con tecnología de punta en sublimación, corte láser e impresión 3D que nos permite crear productos personalizados según las necesidades de nuestros clientes. Nuestro equipo está formado por profesionales apasionados y con experiencia en el rubro.
             </p>
         </div>
-        <!-- <div class="nosotros_descripcion_card_1">
+        <div class="vision_descripcion_card" *ngIf="group.value === 'vision'">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis praesentium molestias! Tenetur dolorem praesentium porro similique quibusdam nisi nihil labore id, dolore iusto totam reiciendis hic consequatur dolor inventore.
+                Ser la empresa líder en nuestra zona en la prestación de servicios de impresión y corte, reconocidos por nuestra eficiencia, calidad y compromiso con el cliente. Buscamos expandir nuestra cartera de productos y hacer crecer la empresa para convertirnos en referentes del sector.
             </p>
         </div>
-        <div class="nosotros_descripcion_card_2">
+        <div class="mision_descripcion_card" *ngIf="group.value === 'mision'">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime blanditiis praesentium molestias! Tenetur dolorem praesentium porro similique quibusdam nisi nihil labore id, dolore iusto totam reiciendis hic consequatur dolor inventore.
+                Ofrecer productos de impresión y corte de alta calidad, cumpliendo con los más altos estándares y plazos establecidos. Buscamos satisfacer las necesidades de nuestros clientes superando sus expectativas a través de nuestra eficiencia, profesionalismo y servicios personalizados de acuerdo a sus requerimientos. Queremos ser un socio estratégico de nuestros clientes, estableciendo relaciones duraderas de confianza y recomendación.
             </p>
-        </div> -->
+        </div>
+
     </div>
 </main>

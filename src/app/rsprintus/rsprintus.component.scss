@@ -4,10 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: gray;
+    background: rgba(0,0,0,0.2);
 }
 .botones_descripcion_container{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -15,9 +16,20 @@
 .botones_container{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    margin-right: 40px;
+    .boton_option{
+        font-size: 30px;
+        font-weight: 500;
+    }
 }
+
+mat-button-toggle{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
 .botones_container button{
     padding: 20px 0 20px 0;
     border-radius: 10px;
@@ -25,6 +37,37 @@
     font-size: 20px;
     font-weight: bold;
 }
+
 .nosotros_descripcion_card{
-    width: 30%;
+    margin-top: 50px;
+    width: 540px;
+    height: 400px;
+    p{
+        font-size: 25px;
+        line-height: 30px;
+        text-align: justify;
+    }
 }
+
+.vision_descripcion_card{
+    margin-top: 50px;
+    width: 540px;
+    height: 400px;
+    p{
+        font-size: 25px;
+        line-height: 30px;
+        text-align: justify;
+    }
+}
+
+.mision_descripcion_card{
+    margin-top: 50px;
+    width: 540px;
+    height: 400px;
+    p{
+        font-size: 25px;
+        line-height: 30px;
+        text-align: justify;
+    }
+}
+

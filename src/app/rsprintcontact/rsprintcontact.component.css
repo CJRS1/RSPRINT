@@ -1,1 +1,140 @@
-/*# sourceMappingURL=rsprintcontact.component.css.map */
+#contact {
+  height: calc(100vh - 56px);
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px 40px 80px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.contact_container h4 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.form_contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.boton_mas_info {
+  margin-top: 15px;
+  background: black;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  color: azure;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.boton_mas_info:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffe55a, #b47a1a, rgb(181, 255, 20), #b47a1a, #ffe55a, #b47a1a, rgb(181, 255, 20), #b47a1a);
+  background-size: 900%;
+  border-radius: 30px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.contact_toggle {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.toggle_option {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+.toggle_option input {
+  width: 30px;
+  height: 30px;
+}
+
+.selection_label_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selection_label_card span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.toggle_option.selected {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .toggle_option input {
+    width: 20px;
+    height: 20px;
+  }
+  .contact_toggle {
+    margin-top: 20px !important;
+    width: 90%;
+  }
+  .selection_label_card span {
+    font-size: 15px;
+  }
+  .contact_container {
+    width: 90%;
+    padding: 10px 20px 10px 20px;
+  }
+  .contact_container h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+}
+@media (min-width: 768px) and (max-width: 1500px) {
+  #contact {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}/*# sourceMappingURL=rsprintcontact.component.css.map */

@@ -1,1 +1,145 @@
-<p>rsprintcontact works!</p>
+<main id="contact">
+    <div class="contact_toggle">
+        <div class="selection_label_card">
+            <label class="toggle_option" [class.selected]="personaSelected">
+                <input type="radio" name="contactType" (click)="togglePersona()" checked>
+            </label>
+            <span>Persona</span>
+        </div>
+        <div class="selection_label_card">
+            <label class="toggle_option" [class.selected]="empresaSelected">
+                <input type="radio" name="contactType" (click)="toggleEmpresa()">
+            </label>
+            <span>Empresa</span>
+        </div>
+    </div>
+    <div class="contact_container" *ngIf="personaSelected">
+        <h4>Contáctanos</h4>
+        <form class="example-form form_contact" [formGroup]="myForm" action="https://formspree.io/f/mkndojpq" method="POST" >
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombre</mat-label>
+                <input type="text" name="name" formControlName="name" matInput placeholder="José" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Apellido</mat-label>
+                <input type="text" name="lastname" formControlName="lastname" matInput placeholder="Gomez" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Selecciona un Departamento</mat-label>
+                <mat-select type="text" formControlName="department" name="department" required>
+                    <mat-option value="Amazonas">Amazonas</mat-option>
+                    <mat-option value="Áncash">Áncash</mat-option>
+                    <mat-option value="Apurímac">Apurímac</mat-option>
+                    <mat-option value="Arequipa">Arequipa</mat-option>
+                    <mat-option value="Ayacucho">Ayacucho</mat-option>
+                    <mat-option value="Cajamarca">Cajamarca</mat-option>
+                    <mat-option value="Callao">Callao</mat-option>
+                    <mat-option value="Cusco">Cusco</mat-option>
+                    <mat-option value="Huancavelica">Huancavelica</mat-option>
+                    <mat-option value="Huánuco">Huánuco</mat-option>
+                    <mat-option value="Ica">Ica</mat-option>
+                    <mat-option value="Junín">Junín</mat-option>
+                    <mat-option value="La Libertad">La Libertad</mat-option>
+                    <mat-option value="Lambayeque">Lambayeque</mat-option>
+                    <mat-option value="Lima">Lima</mat-option>
+                    <mat-option value="Loreto">Loreto</mat-option>
+                    <mat-option value="Madre de Dios">Madre de Dios</mat-option>
+                    <mat-option value="Moquegua">Moquegua</mat-option>
+                    <mat-option value="Pasco">Pasco</mat-option>
+                    <mat-option value="Piura">Piura</mat-option>
+                    <mat-option value="Puno">Puno</mat-option>
+                    <mat-option value="San Martín">San Martín</mat-option>
+                    <mat-option value="Tacna">Tacna</mat-option>
+                    <mat-option value="Tumbes">Tumbes</mat-option>
+                    <mat-option value="Ucayali">Ucayali</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Celular</mat-label>
+                <input type="text" name="cellphone" formControlName="cellphone" matInput placeholder="+51 999 888 777" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" name="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                    placeholder="Ex. pat@example.com">
+                <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                <mat-error>Por favor ingrese un email válido</mat-error>
+                }
+                @if (emailFormControl.hasError('required')) {
+                <mat-error>El email es <strong>requerido</strong></mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Escriba el texto</mat-label>
+                <textarea matInput type="text" formControlName="text" name="text" placeholder="Hola soy José Gomez y quisiera información ..." required></textarea>
+            </mat-form-field>
+            <button type="submit" class="boton_mas_info">Enviar</button>
+        </form>
+    </div>
+    <div class="contact_container" *ngIf="empresaSelected">
+        <h4>Contáctanos</h4>
+        <form class="example-form form_contact" action="https://formspree.io/f/mkndojpq" method="POST" [formGroup]="myForm">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombre Empresa</mat-label>
+                <input matInput type="text" name="name_company" formControlName="name_company" placeholder="Gloria S.A.C." required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>RUC</mat-label>
+                <input matInput type="text" name="ruc_company" placeholder="20123456789" formControlName="ruc_company" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Selecciona un Departamento</mat-label>
+                <mat-select type="text" formControlName="department_company" name="department_company" required>
+                    <mat-option value="Amazonas">Amazonas</mat-option>
+                    <mat-option value="Áncash">Áncash</mat-option>
+                    <mat-option value="Apurímac">Apurímac</mat-option>
+                    <mat-option value="Arequipa">Arequipa</mat-option>
+                    <mat-option value="Ayacucho">Ayacucho</mat-option>
+                    <mat-option value="Cajamarca">Cajamarca</mat-option>
+                    <mat-option value="Callao">Callao</mat-option>
+                    <mat-option value="Cusco">Cusco</mat-option>
+                    <mat-option value="Huancavelica">Huancavelica</mat-option>
+                    <mat-option value="Huánuco">Huánuco</mat-option>
+                    <mat-option value="Ica">Ica</mat-option>
+                    <mat-option value="Junín">Junín</mat-option>
+                    <mat-option value="La Libertad">La Libertad</mat-option>
+                    <mat-option value="Lambayeque">Lambayeque</mat-option>
+                    <mat-option value="Lima">Lima</mat-option>
+                    <mat-option value="Loreto">Loreto</mat-option>
+                    <mat-option value="Madre de Dios">Madre de Dios</mat-option>
+                    <mat-option value="Moquegua">Moquegua</mat-option>
+                    <mat-option value="Pasco">Pasco</mat-option>
+                    <mat-option value="Piura">Piura</mat-option>
+                    <mat-option value="Puno">Puno</mat-option>
+                    <mat-option value="San Martín">San Martín</mat-option>
+                    <mat-option value="Tacna">Tacna</mat-option>
+                    <mat-option value="Tumbes">Tumbes</mat-option>
+                    <mat-option value="Ucayali">Ucayali</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Celular</mat-label>
+                <input type="text" formControlName="cellphone_company" name="cellphone_company" matInput placeholder="+51 999 888 777" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" name="email_company" matInput [formControl]="emailFormControl2" [errorStateMatcher]="matcher"
+                    placeholder="Ex. pat@example.com">
+                <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                @if (emailFormControl2.hasError('email') && !emailFormControl2.hasError('required')) {
+                <mat-error>Por favor ingrese un email válido</mat-error>
+                }
+                @if (emailFormControl2.hasError('required')) {
+                <mat-error>El email es <strong>requerido</strong></mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Escriba el texto</mat-label>
+                <textarea  type="text" name="text_company" formControlName="text2" matInput placeholder="Hola somos la empresa Gloria S.A.C. y quisiera información ..."
+                    required></textarea>
+            </mat-form-field>
+            <button type="submit" class="boton_mas_info">Enviar</button>
+        </form>
+    </div>
+</main>
