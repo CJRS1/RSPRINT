@@ -41,7 +41,15 @@ mat-button-toggle{
 .nosotros_descripcion_card{
     margin-top: 50px;
     width: 540px;
-    height: 400px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: 0;
+    }
     p{
         font-size: 25px;
         line-height: 30px;
@@ -52,7 +60,7 @@ mat-button-toggle{
 .vision_descripcion_card{
     margin-top: 50px;
     width: 540px;
-    height: 400px;
+    height: 280px;
     p{
         font-size: 25px;
         line-height: 30px;
@@ -63,7 +71,7 @@ mat-button-toggle{
 .mision_descripcion_card{
     margin-top: 50px;
     width: 540px;
-    height: 400px;
+    height: 280px;
     p{
         font-size: 25px;
         line-height: 30px;
@@ -71,3 +79,63 @@ mat-button-toggle{
     }
 }
 
+@media (max-width:768px){
+    #nosotros{
+        height: auto;
+        margin-top: 56px;
+        padding: 50px 0 50px 0;
+    }
+    mat-button-toggle{
+        width: 120px;
+        height: 60px;
+    } 
+    .boton_option{
+        font-size: 20px !important;
+    }
+    .nosotros_descripcion_card{
+        width: 90%;
+        height: auto;
+    }
+    mat-form-field{
+        height: 20px;
+    }
+}
+
+@media (max-width:400px){
+    #nosotros{
+        height: auto;
+        margin-top: 56px;
+        padding: 50px 0 50px 0;
+    }
+    mat-button-toggle{
+        width: 80px;
+        height: 60px;
+    } 
+    .boton_option{
+        font-size: 15px !important;
+    }
+    .nosotros_descripcion_card{
+        width: 90%;
+        height: auto;
+        h1{
+            font-size: 25px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .vision_descripcion_card{
+        width: 90%;
+        height: auto;
+        p{
+            font-size: 20px;
+        }
+    }
+    .mision_descripcion_card{
+        width: 90%;
+        height: auto;
+        p{
+            font-size: 20px;
+        }
+    }
+}

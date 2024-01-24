@@ -14,6 +14,8 @@ main {
         font-weight: 900;
         line-height: 60px; 
         text-align: center; 
+        color: white;
+        text-shadow: 0 0 5px #000;
     }
 }
 
@@ -126,7 +128,7 @@ main {
 }
 
 .text_container p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
     color: white;
@@ -165,4 +167,80 @@ main {
     margin-bottom: 10px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 950px) {
+    .service_card {
+        margin-bottom: 20px;
+        h2{
+            line-height: 25px;
+        }
+    }
+
+    .works_done_container {
+        .work_card{
+            img{
+                width: 200px;
+            }
+            h5{
+                font-size: 20px;
+                margin: 0;
+            }
+        }
+    }
+
+    .show_services{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .text_container{
+        .vision_text{
+            font-size: 45px;
+            p{
+                font-size: 45px;
+            }
+        }
+        p{
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .works_done_container {
+        flex-direction: column;
+        .work_card{
+            img{
+                width: 250px;
+            }
+            h5{
+                font-size: 20px;
+                margin: 0;
+            }
+        }
+    }
+
+    .services_container{
+        h4{
+            font-size: 40px !important;
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+    .text_container{
+        .vision_text{
+            font-size: 30px;
+            p{
+                font-size: 30px;
+            }
+        }
+        p{
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
 }

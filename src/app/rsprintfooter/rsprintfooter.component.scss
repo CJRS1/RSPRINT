@@ -1,7 +1,6 @@
 footer {
     display: flex;
     flex-direction: column;
-    background: blue;
     padding: 40px 0 0 0;
     height: 500px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/footer.jpg");
@@ -32,7 +31,7 @@ footer {
     align-items: center;
 
     img {
-        width: 200px !important;
+        width: 200px;
         margin-bottom: 20px;
     }
 
@@ -74,7 +73,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    margin-bottom: 20px;
     a {
         img {
             transition: all 0.3s ease;
@@ -103,6 +102,19 @@ footer {
 
 .tiktok {
     height: 60px;
+}
+
+.contacto_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    h5{
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: white;
+    }
 }
 
 .pago_container {
@@ -148,4 +160,131 @@ footer {
 
 .whatsapp img {
     height: 100px;
+}
+
+@media (min-width: 767px) and (max-width: 1128px) {
+    .footer_container {
+        margin: 0 40px 0 40px;
+    }
+
+    .footer_us_container{
+        width: 200px;
+        p{
+            font-size: 16px;
+        }
+    }
+
+    .footer_localization_container{
+        width: 200px;
+        iframe{
+            width: 100%;
+        }
+    }
+
+    .footer_redes_pago_container{
+        width: 200px;
+        .redes_sociales_container{
+            img{
+                width: 50px;
+            }
+            .tiktok{
+                width: 45px;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    footer{
+        height: auto;
+        p{
+            font-size: 15px !important;
+            line-height: 18px !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    .footer_container{
+        flex-direction: column;
+    }
+
+    .footer_localization_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        iframe{
+            width: 100%;
+            height: 150px;
+        }
+    }
+
+    .footer_us_container{
+        width: 100%;
+        img{
+            height: 50px;
+            width: 50px;
+            margin-bottom: 0;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+
+    .footer_localization_container{
+        width: 100%;
+    }
+
+    .footer_redes_pago_container{
+        width: 100%;
+        margin-bottom: 10px;
+        .redes_sociales_container{
+            a{
+                img{
+                    width: 50px;
+                }
+                .tiktok {
+                    height: 50px;
+                }
+            }
+
+            
+        }
+    }
+
+    .contacto_container{
+        h5{
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    }
+
+    .footer_container {
+        margin: 0 50px 0 50px;
+    }
+
+
+}
+
+@media (max-width: 420px){
+    footer{
+        height: auto;
+        p{
+            margin-top: 20px;
+            font-size: 12px !important;
+            line-height: 15px !important;
+        }
+    }
+
+    .footer_container {
+        margin: 0 20px 0 20px;
+    }
+
+    .pago_container{
+        width: 200px;
+    }
+
+    .pago_app{
+        width: 80px !important;
+    }
 }

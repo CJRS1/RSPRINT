@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './rsprintfooter.component.scss'
 })
 export class RsprintfooterComponent {
-
+  email = 'contacto@rsprint.com';
+  telefono = '+51 993221518';
 }

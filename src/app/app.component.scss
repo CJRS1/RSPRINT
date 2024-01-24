@@ -25,3 +25,10 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 768px) {
+    .img_logo_whatsapp{
+        width: 60px;
+        bottom: 40px;
+    }
+}

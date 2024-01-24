@@ -140,9 +140,25 @@
         h4{
             margin-top: 20px;
             margin-bottom: 20px;
-            font-size: 30px;
+            font-size: 25px;
             font-weight: 900;
         }
+    }
+
+    mat-form-field{
+        height: 80px !important;
+    }
+
+    mat-label{
+        font-size: 12px;
+    }
+
+    mat-option{
+        font-size: 12px;
+    }
+
+    input{
+        font-size: 12px !important;
     }
 }
 
