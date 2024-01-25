@@ -10,5 +10,5 @@ import { RsprintmainComponent } from '../rsprintmain/rsprintmain.component';
   styleUrl: './rsprinthome.component.scss'
 })
 export class RsprinthomeComponent {
-  
+
 }

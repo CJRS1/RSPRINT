@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
@@ -13,6 +13,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { Router, NavigationEnd } from '@angular/router';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -28,7 +29,25 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './rsprintcontact.component.html',
   styleUrl: './rsprintcontact.component.scss'
 })
-export class RsprintcontactComponent {
+export class RsprintcontactComponent implements OnInit {
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.reloadPage();
+  }
+
+  reloadPage() {
+    window.scrollTo(0, 0);
+  }
+
+  listenRouting() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) { 
+        this.reloadPage();
+      }  
+    });
+  }
+
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   emailFormControl2 = new FormControl('', [Validators.required, Validators.email]);
 

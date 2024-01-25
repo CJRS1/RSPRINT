@@ -2,19 +2,19 @@
     <div class="services_container">
         <h4>Nuestros Servicios</h4>
         <div class="show_services">
-            <a (click)="onLinkClick('impresion3d')" class="service_card">
+            <a [routerLink]="['/servicios']" [fragment]="'impresion3d'" class="service_card">
                 <img class="service_img" src="../../assets/Servicios/3D.jpg" alt="Impresión 3D">
                 <h2>Impresión 3D</h2>
             </a>
-            <a (click)="onLinkClick('cortelaser')" class="service_card">
+            <a [routerLink]="['/servicios']" [fragment]="'cortelaser'" class="service_card">
                 <img class="service_img" src="../../assets/Servicios/Laser.jpg" alt="Corte Láser">
                 <h2>Corte Láser</h2>
             </a>
-            <a (click)="onLinkClick('impresion')" class="service_card">
+            <a [routerLink]="['/servicios']" [fragment]="'impresion'" class="service_card">
                 <img class="service_img" src="../../assets/Servicios/Printer.jpg" alt="Impresión">
                 <h2>Impresión</h2>
             </a>
-            <a (click)="onLinkClick('sublimacion')" class="service_card">
+            <a [routerLink]="['/servicios']" [fragment]="'sublimacion'" class="service_card">
                 <img class="service_img" src="../../assets/Servicios/Sublimator.jpg" alt="Sublimación">
                 <h2>Sublimación</h2>
             </a>
