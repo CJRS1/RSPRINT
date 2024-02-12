@@ -1,29 +1,32 @@
 <main id="nosotros" #container>
-    <!-- <div class="servicio_logo_titulo">
-        <img src="" alt="Nuestros Servicios">
-    </div> -->
+    <div class="servicio_logo_titulo">
+        <h5>Conócenos</h5>
+    </div> 
+
     <div class="botones_descripcion_container">
         <div class="botones_container">
-            <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style" >
-                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="nosotros" #group="matButtonToggleGroup" >
-                    <mat-button-toggle value="nosotros" class="boton_option">Nosotros</mat-button-toggle>
-                    <mat-button-toggle value="vision" class="boton_option">Visión</mat-button-toggle>
-                    <mat-button-toggle value="mision" class="boton_option">Misión</mat-button-toggle>
-                </mat-button-toggle-group>
-            </mat-button-toggle-group>
+            <button class="boton_option" [class.active]="active === 'nosotros'" (click)="setActive('nosotros')">
+                <span>Nosotros</span>
+            </button>
+            <button class="boton_option" [class.active]="active === 'vision'" (click)="setActive('vision')">
+                <span>Visión</span>
+            </button> 
+            <button class="boton_option" [class.active]="active === 'mision'" (click)="setActive('mision')">
+                <span>Misión</span>
+            </button>
         </div>
-        <div class="nosotros_descripcion_card" *ngIf="group.value === 'nosotros'">
+        <div class="nosotros_descripcion_card" *ngIf="active === 'nosotros'">
             <h1>RS Print and Cut</h1>
             <p>
                 es una empresa joven dedicada a ofrecer servicios de impresión y corte de alta calidad. Contamos con tecnología de punta en sublimación, corte láser e impresión 3D que nos permite crear productos personalizados según las necesidades de nuestros clientes. Nuestro equipo está formado por profesionales apasionados y con experiencia en el rubro.
             </p>
         </div>
-        <div class="vision_descripcion_card" *ngIf="group.value === 'vision'">
+        <div class="vision_descripcion_card" *ngIf="active === 'vision'">
             <p>
                 Ser la empresa líder en nuestra zona en la prestación de servicios de impresión y corte, reconocidos por nuestra eficiencia, calidad y compromiso con el cliente. Buscamos expandir nuestra cartera de productos y hacer crecer la empresa para convertirnos en referentes del sector.
             </p>
         </div>
-        <div class="mision_descripcion_card" *ngIf="group.value === 'mision'">
+        <div class="mision_descripcion_card" *ngIf="active === 'mision'">
             <p>
                 Ofrecer productos de impresión y corte de alta calidad, cumpliendo con los más altos estándares y plazos establecidos. Buscamos satisfacer las necesidades de nuestros clientes superando sus expectativas a través de nuestra eficiencia, profesionalismo y servicios personalizados de acuerdo a sus requerimientos. Queremos ser un socio estratégico de nuestros clientes, estableciendo relaciones duraderas de confianza y recomendación.
             </p>

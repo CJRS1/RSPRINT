@@ -1,36 +1,78 @@
-#nosotros{
+#nosotros {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0,0,0,0.2);
 }
-.botones_descripcion_container{
+
+.botones_descripcion_container {
     display: flex;
     flex-direction: column;
+    height: calc(100vh - 200px);
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-.botones_container{
+
+.servicio_logo_titulo {
+    height: 200px;
+    padding-top: 56px;
     display: flex;
-    flex-direction: column;
-    .boton_option{
-        font-size: 30px;
-        font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #b47a1a, #ffe55a);
+    margin-bottom: 50px;
+
+    h5 {
+        font-size: 45px;
+        font-weight: 900;
+        color: white;
+        text-shadow: 0 0 10px #000;
     }
 }
 
-mat-button-toggle{
+
+.botones_container {
+    display: flex;
+    flex-direction: row;
+
+    .boton_option {
+        background: white;
+        border-radius: 25px;
+        padding: 15px 30px;
+        margin-right: 20px;
+        border: none;
+        border-radius: 10px;
+        border: 1px solid #b47a1a;
+        margin-left: 20px;
+
+        span {
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(90deg, #b47a1a, #ffe55a);
+            -webkit-background-clip: text;
+            text-shadow: 0 0 0 0;
+            font-size: 25px;
+        }
+
+        &.active {
+            background: linear-gradient(90deg, #b47a1a, #ffe55a);
+
+            span {
+                -webkit-text-fill-color: #fff;
+            }
+        }
+    }
+
+}
+
+mat-button-toggle {
     width: 180px;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
-.botones_container button{
+.botones_container button {
     padding: 20px 0 20px 0;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -38,104 +80,131 @@ mat-button-toggle{
     font-weight: bold;
 }
 
-.nosotros_descripcion_card{
+.nosotros_descripcion_card {
     margin-top: 50px;
     width: 540px;
     height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1{
+
+    h1 {
         font-size: 30px;
         font-weight: 900;
         margin-bottom: 0;
     }
-    p{
+
+    p {
         font-size: 25px;
         line-height: 30px;
         text-align: justify;
     }
 }
 
-.vision_descripcion_card{
+.vision_descripcion_card {
     margin-top: 50px;
     width: 540px;
     height: 280px;
-    p{
+
+    p {
         font-size: 25px;
         line-height: 30px;
         text-align: justify;
     }
 }
 
-.mision_descripcion_card{
+.mision_descripcion_card {
     margin-top: 50px;
     width: 540px;
     height: 280px;
-    p{
+
+    p {
         font-size: 25px;
         line-height: 30px;
         text-align: justify;
     }
 }
 
-@media (max-width:768px){
-    #nosotros{
-        height: auto;
-        margin-top: 56px;
-        padding: 50px 0 50px 0;
-    }
-    mat-button-toggle{
-        width: 120px;
-        height: 60px;
-    } 
-    .boton_option{
+@media (max-width:768px) {
+    .boton_option {
         font-size: 20px !important;
     }
-    .nosotros_descripcion_card{
+
+    .nosotros_descripcion_card {
         width: 90%;
         height: auto;
     }
-    mat-form-field{
+
+    mat-form-field {
         height: 20px;
+    }
+
+    .nosotros_descripcion_card {
+        width: 90%;
+        height: auto;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .vision_descripcion_card {
+        width: 90%;
+        height: auto;
+
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .mision_descripcion_card {
+        width: 90%;
+        height: auto;
+
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .boton_option {
+        span {
+            font-size: 20px !important;
+        }
+    }
+
+    .servicio_logo_titulo {
+        h5 {
+            font-size: 35px !important;
+        }
     }
 }
 
-@media (max-width:400px){
-    #nosotros{
-        height: auto;
-        margin-top: 56px;
-        padding: 50px 0 50px 0;
-    }
-    mat-button-toggle{
-        width: 80px;
-        height: 60px;
-    } 
+@media (max-width:500px) {
+
     .boton_option{
-        font-size: 15px !important;
+        margin: 5px !important;
     }
-    .nosotros_descripcion_card{
-        width: 90%;
-        height: auto;
-        h1{
-            font-size: 25px;
-        }
-        p{
-            font-size: 20px;
+    .boton_option {
+        padding: 10px 15px !important;
+        span {
+            font-size: 17px !important;
         }
     }
-    .vision_descripcion_card{
-        width: 90%;
-        height: auto;
-        p{
-            font-size: 20px;
-        }
+
+    .botones_descripcion_container{
+        justify-content: flex-start;
     }
-    .mision_descripcion_card{
-        width: 90%;
-        height: auto;
-        p{
-            font-size: 20px;
-        }
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+    h1{
+        font-size: 30px !important;
+    }
+    p {
+        font-size: 18px !important;
     }
 }

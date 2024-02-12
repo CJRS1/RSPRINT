@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RsprintheaderComponent } from '../rsprintheader/rsprintheader.component';
 import { RsprintfooterComponent } from '../rsprintfooter/rsprintfooter.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -25,9 +25,16 @@ export class RsprintusComponent implements OnInit {
 
   listenRouting() {
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) { 
+      if (event instanceof NavigationEnd) {
         this.reloadPage();
-      }  
+      }
     });
+  }
+
+  // En el componente
+  active = 'nosotros';
+
+  setActive(section : string) {
+    this.active = section;
   }
 }

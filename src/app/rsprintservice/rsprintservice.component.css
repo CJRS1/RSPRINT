@@ -4,17 +4,27 @@
   justify-content: center;
   align-items: center;
   padding: 0 0 40px 0;
-  margin-top: 56px;
+}
+
+.servicio_logo_titulo {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #b47a1a, #ffe55a);
+  margin-bottom: 20px;
+  padding-top: 56px;
+}
+.servicio_logo_titulo h5 {
+  font-size: 45px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 10px #000;
 }
 
 .service_container_img {
   display: none;
-}
-
-.servicio_logo_titulo {
-  width: 100%;
-  background: yellow;
-  height: 300px;
 }
 
 .servicio_container {
@@ -65,7 +75,7 @@
 
 .boton_mas_info {
   margin-top: 15px;
-  background: black;
+  background: linear-gradient(90deg, #b47a1a, #ffe55a);
   text-decoration: none;
   cursor: pointer;
   border: none;
@@ -125,10 +135,7 @@
     width: 260px;
   }
 }
-@media (max-width: 645px) {
-  #servicio {
-    margin-top: 56px;
-  }
+@media (max-width: 870px) {
   .servicio_container {
     display: none;
   }
@@ -172,6 +179,12 @@
     position: absolute;
     bottom: 2%;
   }
+  .servicio_logo_titulo h5 {
+    font-size: 35px !important;
+  }
+  .boton_mas_info {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 460px) {
   .service_container_img {
@@ -193,5 +206,25 @@
   }
   .boton_mas_info {
     font-size: 20px;
+  }
+  .servicio_logo_titulo h5 {
+    text-align: center;
+    font-size: 30px;
+    width: 300px;
+    line-height: 40px;
+  }
+  .boton_mas_info {
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 368px) {
+  .service_container_img p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .boton_mas_info {
+    margin-bottom: 10px;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=rsprintservice.component.css.map */

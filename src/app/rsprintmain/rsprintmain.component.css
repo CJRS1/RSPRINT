@@ -7,10 +7,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .services_container h4 {
   margin-top: 15px;
-  font-size: 50px;
+  font-size: 40px !important;
   font-weight: 900;
   line-height: 60px;
   text-align: center;
@@ -27,6 +28,7 @@ main {
   align-items: center;
   width: 100%;
   padding: 20px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .service_card {
@@ -159,6 +161,18 @@ main {
   margin-bottom: 10px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.slogan_container {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url(../../assets/slogan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 950px) {

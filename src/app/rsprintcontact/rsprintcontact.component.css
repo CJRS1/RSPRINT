@@ -1,11 +1,26 @@
 #contact {
-  height: calc(100vh - 56px);
-  background: rgba(0, 0, 0, 0.1);
-  margin-top: 56px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 0 !important;
+}
+
+.servicio_logo_titulo {
+  height: 200px;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(90deg, #b47a1a, #ffe55a);
+  margin-bottom: 10px;
+  padding-top: 56px;
+}
+.servicio_logo_titulo h5 {
+  font-size: 45px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 10px #000;
 }
 
 .contact_container {
@@ -14,14 +29,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 80px 40px 80px;
+  padding: 30px 60px 30px 60px;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-.contact_container h4 {
-  margin-bottom: 50px;
-  font-size: 40px;
-  font-weight: 900;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .form_contact {
@@ -32,7 +42,7 @@
 
 .boton_mas_info {
   margin-top: 15px;
-  background: black;
+  background: linear-gradient(90deg, #b47a1a, #ffe55a);
   text-decoration: none;
   cursor: pointer;
   border: none;
@@ -75,7 +85,6 @@
   width: 500px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
 }
 
 .toggle_option {
@@ -86,8 +95,8 @@
   transition: background-color 0.3s;
 }
 .toggle_option input {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .selection_label_card {
@@ -111,19 +120,27 @@
     padding-bottom: 20px;
   }
   .toggle_option input {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   .contact_toggle {
     margin-top: 20px !important;
     width: 90%;
+  }
+  .form_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .servicio_logo_titulo {
+    margin-bottom: 0;
   }
   .selection_label_card span {
     font-size: 15px;
   }
   .contact_container {
     width: 90%;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 0px 20px 0px;
   }
   .contact_container h4 {
     margin-top: 20px;
@@ -133,6 +150,7 @@
   }
   mat-form-field {
     height: 80px !important;
+    width: 80%;
   }
   mat-label {
     font-size: 12px;
@@ -143,10 +161,24 @@
   input {
     font-size: 12px !important;
   }
+  .servicio_logo_titulo h5 {
+    font-size: 35px !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1500px) {
   #contact {
     height: auto;
     padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  span {
+    font-size: 15px;
+  }
+  .toggle_option input {
+    width: 20px;
+    height: 20px;
+  }
+  h4 {
+    font-size: 35px !important;
   }
 }/*# sourceMappingURL=rsprintcontact.component.css.map */
